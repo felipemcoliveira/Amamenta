@@ -39,7 +39,8 @@ npm install
 Gere a build de todos os workspaces:
 
 ```bash
-# um erro sera causado pelo workspace client/core por conta da ausência de um script de build, basta ignora-ló
+# um erro sera causado pelo workspace client/core por
+# conta da ausência de um script de build, basta ignora-ló
 npm run build --workspaces
 ```
 

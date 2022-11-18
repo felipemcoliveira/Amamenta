@@ -1,0 +1,68 @@
+@import './variables.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+.fr-view {
+  *,
+  *:first-child,
+  *:last-child,
+  *::before,
+  *::after {
+    all: revert;
+    font-family: 'Play', sans-serif !important;
+  }
+}
+
+body {
+  background-color: #e9dedc !important;
+}
+
+* {
+  font-family: 'Play', sans-serif;
+}
+
+.dashboard {
+  padding: 24px 0 64px 0;
+}
+
+.ui {
+  .button {
+    font-family: 'Play', sans-serif;
+  }
+}
+
+.fr-btn {
+  border: 1px solid rgba(0, 0, 0, 0.098) !important;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.fr-toolbar,
+.fr-second-toolbar {
+  border: none !important;
+  background-color: rgb(234, 234, 234) !important;
+  border-radius: 0 !important;
+}
+
+.fr-second-toolbar {
+  display: none;
+}
+
+.text-editor {
+  padding: 0 !important;
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0 !important;
+  }
+}
+
+.category-name {
+  padding: 2px 6px;
+  border-radius: 2px;
+  color: white;
+  border: 1px solid #00000022;
+}
+
+.color-input input {
+  background-color: red;
+  height: 40px;
+  padding: 2px !important;
+}

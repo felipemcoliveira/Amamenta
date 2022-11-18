@@ -1,0 +1,61 @@
+@import './variables.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+// ------------------------------------------------------------------------------------------------------------
+// Froala View
+// ------------------------------------------------------------------------------------------------------------
+
+.fr-view:not([data-css-revert='false']) {
+  * {
+    all: revert;
+    font-family: 'Play', sans-serif !important;
+  }
+}
+
+// ------------------------------------------------------------------------------------------------------------
+// Global
+// ------------------------------------------------------------------------------------------------------------
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'Play', sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-size: 12px;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// ------------------------------------------------------------------------------------------------------------
+// Content placeholder
+// ------------------------------------------------------------------------------------------------------------
+
+@keyframes placeholderAnimate {
+  0% {
+    background-position: -650px 0;
+  }
+  100% {
+    background-position: 650px 0;
+  }
+}
+
+// Content placeholder element
+.cpe {
+  user-select: none;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: placeholderAnimate;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #ddd 2%, #bbb 18%, #ddd 33%);
+  background-size: 1300px;
+  color: transparent !important;
+}

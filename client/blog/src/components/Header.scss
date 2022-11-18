@@ -1,0 +1,35 @@
+@import '../styles/breakpoints.scss';
+
+.header {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+
+  @include respond-below(sm) {
+    flex-direction: column;
+  }
+
+  &__logo {
+    height: 220px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__title {
+    text-align: center;
+    padding: 4px;
+    font-size: 1.5rem;
+    color: rgb(52, 52, 52);
+    padding: 32px;
+    line-height: 1.5;
+
+    @include respond-below(xs) {
+      font-size: 1rem;
+      padding: 8px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import '../styles/variables';
+@import '../styles/breakpoints';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, white, transparent);
+  box-shadow: 0 -5px 12px -1px rgb(0 0 0 / 5%);
+  justify-content: center;
+  height: $footer-height;
+  box-sizing: border-box;
+  margin-top: 64px;
+  padding: 8px;
+
+  &__title {
+    font-size: 1.2rem;
+    padding-bottom: 0.4rem;
+    color: #e03997;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  &__content {
+    color: rgba(82, 82, 82, 0.727);
+    max-width: 900px;
+    text-align: justify;
+    font-size: 0.9rem;
+    line-height: 1em;
+
+    @include respond-below(xs) {
+      font-size: 0.7rem;
+    }
+  }
+}

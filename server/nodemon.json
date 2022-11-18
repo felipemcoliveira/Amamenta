@@ -1,0 +1,8 @@
+{
+  "ext": "ts",
+
+  "execMap": {
+    "ts": "ts-node"
+  },
+  "ignore": ["data/**"]
+}

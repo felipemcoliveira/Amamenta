@@ -56,7 +56,7 @@ export function deserializePostContent(post) {
   const attachmentImages = viewElement.querySelectorAll('img[attachment-instanceid]');
   for (const attachmentImage of attachmentImages) {
     const attachmentInstanceId = parseInt(attachmentImage.getAttribute('attachment-instanceid'));
-    if (attachmentInstanceId === NaN) {
+    if (isNaN(attachmentInstanceId)) {
       continue;
     }
 

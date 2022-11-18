@@ -12,8 +12,8 @@ Este repositório contem a minha contribuição para o Projeto Amamenta ([Labora
 </p>
 
 <p align='center'>
-  <img height="350px" src='./images/blog-preview.gif'>
-  <img height="350px" src='./images/admin-panel-screenshots.gif'>
+  <img width='100%' src='./images/blog-preview.gif'>
+  <img width='100%' src='./images/admin-panel-screenshots.gif'>
 </p>
 
 # Rodando a Aplicação
@@ -39,8 +39,8 @@ npm install
 Gere a build de todos os workspaces:
 
 ```bash
-# um erro sera causado pelo workspace client/core por
-# conta da ausência de um script de build, basta ignora-ló
+# um erro sera causado pelo workspace client/core por conta
+# da ausência de um script de build, basta ignora-ló
 npm run build --workspaces
 ```
 

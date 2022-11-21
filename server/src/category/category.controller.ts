@@ -39,21 +39,12 @@ export class CategoryController {
   @HttpCode(HttpStatus.CREATED)
   @Protected(PermissionIdentifiers.CanManageCategories)
   async create(@Body() createCategoryDto: CreateCategoryDto) {
-    if (await this.categoryService.findByName(createCategoryDto.name)) {
-      throw new ConflictException(`Já existe uma categoria com o nome \"${createCategoryDto.name}\".`);
-    }
     return this.categoryService.create(createCategoryDto);
   }
 
   @Patch(':id')
   @Protected(PermissionIdentifiers.CanManageCategories)
   async update(@Param('id', ParseIntPipe) id: number, @Body() updateCategoryDto: UpdateCategoryDto) {
-    if ('name' in updateCategoryDto) {
-      const c0 = await this.categoryService.findByName(updateCategoryDto.name);
-      if (c0.id !== id) {
-        throw new ConflictException(`Já existe uma categoria com o nome \"${updateCategoryDto.name}\".`);
-      }
-    }
     const category = await this.categoryService.findOneOrFail(id);
     await this.categoryService.update(category, updateCategoryDto);
     return category;

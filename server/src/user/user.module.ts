@@ -6,7 +6,7 @@ import { PermissionModule } from '../permission/permission.module';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
 import User from './user.model';
-import { CreateUserCommandRunner } from './command/create-user.command-runner';
+import { CreateUserCommandRunner } from './commands/create-user.command-runner';
 
 @Module({
   imports: [PermissionModule, SequelizeModule.forFeature([User])],

@@ -101,8 +101,9 @@ node dist/main-cli db:sync
 Crie um usuário para gerenciar o sistema:
 
 ```bash
-# com apenas a permissão de CAN_MANAGE_PERMISSIONS o usuário já é capaz de adicionar as demais
-node dist/main-cli user:create <email> <password> <firstName> <lastName> --permissions "CAN_MANAGE_USERS, CAN_MANAGE_PERMISSIONS"
+# com apenas a permissão de CAN_MANAGE_USER_PERMISSIONS o usuário já é capaz de adicionar as demais.
+# para adicionar mais de uma permissão use aspás e vírgula. (ex.: "CAN_MANAGE_ANY_POSTS, CAN_MANAGE_USERS")
+node dist/main-cli user:create <email> <password> <firstName> <lastName> --permissions CAN_MANAGE_USER_PERMISSIONS
 ```
 
 Inicialize o servidor:

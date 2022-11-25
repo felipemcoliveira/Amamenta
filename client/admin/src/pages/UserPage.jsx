@@ -31,7 +31,7 @@ export default function UserPage() {
 
   // permissions
   const canManagePosts = isMe || hasPermission('CAN_MANAGE_ANY_POSTS');
-  const canManagePermissions = hasPermission('CAN_MANAGE_PERMISSIONS');
+  const canManagePermissions = hasPermission('CAN_MANAGE_USER_PERMISSIONS');
   const canManageUsers = hasPermission('CAN_MANAGE_USERS');
 
   let content = null;
